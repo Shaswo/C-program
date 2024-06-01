@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main(){
+    int n ;
+    printf("Enter a number:");
+    scanf("%d", &n);
+
+int original = n;
+int reverse = 0;
+int lastDigit;
+
+
+while(n!=0)   //or n>0
+{
+   reverse= reverse*10;
+   lastDigit = n%10; 
+   reverse =reverse + (lastDigit);
+   
+    
+    n = n/10;
+}
+int sum = original + reverse;
+printf("The reverse number of digits are %d \n",reverse);
+printf("The sum is %d", sum);
+
+
+
+return 0;
+}
